@@ -66,8 +66,8 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
 
                     </div>}
 
-                    <button type="submit" className="bg-green-400 px-6 py-2  lg:rounded-r-md rounded-md">
-                        {editTodo ? 'ok' : "Add"}
+                    <button type="submit" className="bg-green-400 px-6 py-2 my-2 lg:my-0  lg:rounded-r-md rounded-md uppercase">
+                        {editTodo ? 'update' : "Add"}
                     </button>
                 </form>
             </div>

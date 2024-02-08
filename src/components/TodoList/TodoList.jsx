@@ -72,18 +72,18 @@ const TodoList = ({ todos, setTodos, setEditTodo }) => {
                 </div> */}
                 {
                     todos.map((todo) =>
-                        <div className="flex items-center justify-between px-10 py-5 border-t-[1px] border-gray-400 font-medium"
+                        <div className="flex items-center justify-between px-[2vw] lg:px-10 py-5 border-t-[1px] border-gray-400 font-medium"
                             key={todo.id}>
 
-                            <div className={`${todo.completed ? "line-through" : ""} w-1/2`}>{todo.title}</div>
+                            <div className={`${todo.completed ? "line-through text-green-600" : ""} w-1/2`}>{todo.title}</div>
 
-                            <div className={`${todo.completed ? "line-through bg-green-100" : ""}text-center`}>{todo.priority}</div>
+                            <div className='text-center'>{todo.priority}</div>
 
                             <div className='flex gap-4'>
 
-                                <button onClick={() => handleComplete(todo)}><IoCheckmarkDoneSharp /></button>
-                                <button onClick={() => handleEdit(todo)}><MdEditDocument /></button>
-                                <button onClick={() => handleDelete(todo)}><RiDeleteBin6Line /></button>
+                                <button onClick={() => handleComplete(todo)}><IoCheckmarkDoneSharp size={20} /></button>
+                                <button onClick={() => handleEdit(todo)}><MdEditDocument size={20} /></button>
+                                <button onClick={() => handleDelete(todo)}><RiDeleteBin6Line size={20} /></button>
                             </div>
 
                         </div>)
@@ -91,9 +91,9 @@ const TodoList = ({ todos, setTodos, setEditTodo }) => {
 
                 <div className="flex w-full justify-between items-center bg-white p-2 lg:p-6">
                     <div className="bg-white">Total task: {todos.length}</div>
-                    <div className="flex  lg:gap-4 bg-slate-300 px-1 lg:px-4 py-2 rounded">
-                        <div className="cursor-pointer hover:scale-90 hover:bg-slate-100 duration-500 px-4 py-2 rounded-md" onClick={() => handlePriorityFilter('completed')}>Completed task: {completedTask.length} </div>
-                        <div className="cursor-pointer hover:scale-90 hover:bg-slate-100 duration-500 px-4 py-2 rounded-md" onClick={() => handlePriorityFilter('incompleted')}>Incompleted task: {inCompletedTask.length}</div>
+                    <div className="flex gap-2 lg:gap-4 bg-slate-300 px-2 lg:px-4 py-2 rounded">
+                        <div >Completed task: {completedTask.length} </div>
+                        <div >Incompleted task: {inCompletedTask.length}</div>
                     </div>
                 </div>
             </div>
