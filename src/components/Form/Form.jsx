@@ -45,7 +45,7 @@ const Form = ({ input, setInput, todos, setTodos, editTodo, setEditTodo }) => {
     }
 
     return (
-        <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white  mx-auto mt-4 lg:mt-8">
+        <div className="w-full max-w-3xl shadow-lg rounded-lg p-6 bg-white  mx-auto mt-20 lg:mt-28">
             <div className="">
                 <form onSubmit={onFormSubmit} className='flex flex-col lg:flex-row items-center bg-gray-100 rounded-md gap-4'>
 
