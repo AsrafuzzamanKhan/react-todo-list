@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div className='flex flex-col justify-center w-full min-h-screen bg-cover bg-no-repeat bg-[url("./assets/bg.png")]'>
+      <div className='flex flex-col px-[1vw] justify-center w-full min-h-screen bg-cover bg-no-repeat bg-[url("./assets/bg.png")]'>
         <Form
           input={input}
           setInput={setInput}
